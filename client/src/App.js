@@ -9,7 +9,7 @@ function App() {
     async function fetchData() {
       const data = await getPokemonList()
       console.log(data);
-      setPokemonData(data?.result)
+      setPokemonData(data?.results)
     }
 
     fetchData()
@@ -18,10 +18,13 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div style={{
+       marginTop:"40px", justifyContent:"space-around", display:"flex", flexWrap:"wrap" , width:"90%",margin:"auto"
+
+      }}>
         {
           pokemonData.map((poke,i) => (
-                       <div>
+                       <div style={{width:"400px", height:"330px", border:"2px solid #00000" ,margin:"30px"}}>
 
                          <img 
                            style={{with:'300px',height:'300px'}}
@@ -29,8 +32,12 @@ function App() {
                            src={`https://img.pokemon.net/artwork/large/${poke.name}.jpg`}
                          />
 
-
+                            
+                            
                        </div>
+                          
+                         
+                         
 
                     
                    ))
