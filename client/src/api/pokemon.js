@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 
-const URL = `https://pokeapi.co/api/v2/pokemon?limit=151`
+const URL = `https://pokeapi.co/api/v2/pokemon?limit=50`
 
 
 export const getPokemonList = async ()=>{

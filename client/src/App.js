@@ -24,12 +24,15 @@ function App() {
       }}>
         {
           pokemonData.map((poke,i) => (
-                       <div style={{width:"400px", height:"330px", border:"2px solid #00000" ,margin:"30px"}}>
+                       <div key={i} style={{width:"400px", height:"330px", border:"2px solid #00000" ,margin:"30px 10px"}}>
+                            <div style={{padding:"5px 10px"}} >
+                                    <p style={{fontWeight:"bold", textTransform:"capitalize"}}>{poke.name}</p>
 
+                            </div>
                          <img 
                            style={{with:'300px',height:'300px'}}
                            alt='pokemon'
-                           src={`https://img.pokemon.net/artwork/large/${poke.name}.jpg`}
+                           src={`https://img.pokemondb.net/artwork/large/${poke.name}.jpg`}
                          />
 
                             
